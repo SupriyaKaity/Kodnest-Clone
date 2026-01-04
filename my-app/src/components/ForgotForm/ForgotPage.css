@@ -1,0 +1,230 @@
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Stack Sans Text", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Left Section (Yellow Background) */
+.left-section {
+  width: 53%;
+  flex: 1;
+  /* width: calc(50% - 34px);   
+  height: calc(100vh - 34px); */
+  background-color: #ffd93b;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  padding-top: -17px;
+  margin: 17px;
+  overflow: hidden;
+}
+
+.left-section .illustration {
+  width: 100%;
+  max-width: 710px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Right Section (Form + Logo) */
+.right-section {
+  width: 47%;
+  padding: 50px;
+  margin-left: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* KodNest Logo */
+.logo-container {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+
+.kodnest-logo {
+  width: 120px;
+  height: auto;
+  margin-right: 80px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  /* margin-bottom: 10px; */
+}
+
+p {
+  color: gray;
+  margin-bottom: 30px;
+}
+
+.forgot-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+}
+
+.forgot-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+/* Error Message Styling */
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: -30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: "Stack Sans Text", sans-serif;
+}
+
+.forgot-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 8px; space between icon and text */
+  background-color: black;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 40px;
+  font-weight: 700;
+  font-weight: bold;
+}
+
+.back-login-btn {
+  display: flex;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 8px;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.back-login-btn:hover {
+  background-color: #eceae8; /* light yellow */
+}
+
+
+.forgot {
+  text-align: left;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: -30px;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* 🖥️ When screen is half-width or inspect is open */
+@media (max-width: 1024px) {
+  .login-container {
+    flex-direction: row; /* keep side by side */
+    flex-wrap: nowrap;
+  }
+
+  .left-section {
+    display: flex;
+    width: 45%; /* smaller but visible */
+    height: auto;
+    margin: 10px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffd93b;
+  }
+
+  .left-section img {
+    max-width: 85%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .right-section {
+    width: 55%;
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .logo-container {
+    position: static;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h2,
+  p {
+    text-align: center;
+  }
+}
+
+/* 📱 For true small mobile screens only (stack vertically) */
+@media (max-width: 600px) {
+  .login-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-section {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .right-section {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .logo-container {
+    position: static;
+    margin-bottom: 15px;
+  }
+}
+
+
+
+/* Removes browser's default password eye icon */
+input::-ms-reveal,
+input::-ms-clear,
+input::-webkit-textfield-decoration-container,
+input::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
+

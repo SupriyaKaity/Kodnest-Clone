@@ -1,0 +1,300 @@
+.reset-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: "Stack Sans Text", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Left Section (Yellow Illustration) */
+.left-section-reset {
+  width: 53%;
+  height: 95.5vh;
+  background-color: #ffd93b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin: 17px;
+  overflow: hidden;
+}
+
+.illustration-reset {
+  width: 100%;
+  max-width: 710px;
+  object-fit: contain;
+}
+
+/* Right Section */
+.right-section-reset {
+  width: 47%;
+  padding: 50px;
+  margin-left: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+/* Logo */
+.logo-reset-container {
+  position: absolute;
+  top: 30px;
+  right: 100px;
+}
+
+.kodnest-logo-reset {
+  width: 120px;
+  height: auto;
+}
+
+/* Headings */
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  color: gray;
+  margin-bottom: 10px;
+}
+
+/* Form */
+.reset-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 500px;
+}
+
+.reset-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+/* Password Container */
+.password-container-reset {
+  position: relative;
+}
+
+.password-container-reset input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.password-toggle-reset {
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 8px;
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-toggle-reset:hover {
+  background-color: #ebe8e8;
+}
+
+.toggle-icon-reset {
+  width: 20px;
+  height: 20px;
+}
+
+/* OTP input + check icon */
+/* OTP INPUT WRAPPER */
+.otp-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.otp-input-container input {
+  width: 100%;
+  padding-right: 40px; /* space for the check icon */
+}
+
+/* CHECK ICON INSIDE INPUT */
+.otp-check-icon {
+  position: absolute;
+  right: 12px;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+/* SMALL OTP STATUS BOX */
+/* .otp-status-box {
+  margin-top: 6px;
+  padding: 6px 12px;
+  width: fit-content; 
+  border-radius: 6px;
+  font-size: 14px;
+} */
+
+/* .otp-status-box.verified {
+  background: #d4f7d4;
+  color: green;
+  font-weight: bold;
+}
+
+.otp-status-box.invalid {
+  background: #ffd7d7;
+  color: red;
+  font-weight: bold;
+} */
+
+.otp-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+  gap: 10px;
+}
+
+.otp-status-row .error {
+  margin-top: -10px;
+  color: red;
+  font-size: 13px;
+}
+
+
+.otp-verify-box {
+  margin-top: -10px;
+  padding: 2px 5px;
+  border-radius: 6px;
+  font-size: 10px;
+  width: fit-content;
+  margin-left: auto;
+  display: block;
+}
+
+.otp-verify-box.verified {
+  background: #d4ffda;
+  color: green;
+  border: 1px solid green;
+}
+
+.otp-verify-box.invalid {
+  background: #ffe2e2;
+  color: red;
+  border: 1px solid red;
+}
+
+/* Password rule turns green */
+.valid {
+  color: green !important;
+  font-weight: bold;
+}
+
+/* Criteria Box */
+.criteria-box-reset {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.criteria-box-reset ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.criteria-box-reset li {
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Button */
+.reset-btn-reset {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bolder;
+  width: 100%;
+}
+
+/* error text */
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: -8px;
+  margin-bottom: 5px;
+}
+
+/* Responsive (same as login) */
+@media (max-width: 1024px) {
+  .reset-container {
+    flex-direction: row;
+  }
+
+  .left-section-reset {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .right-section-reset {
+    width: 55%;
+    margin: 10px;
+    padding: 30px;
+    align-items: center;
+  }
+
+  .reset-form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .logo-reset-container {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  h2,
+  p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .reset-container {
+    flex-direction: column;
+  }
+
+  .left-section-reset {
+    width: 100%;
+    margin: 0;
+  }
+
+  .right-section-reset {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .logo-reset-container {
+    position: static;
+  }
+}
+
+/* Remove browser default password-eye icon */
+input::-ms-reveal,
+input::-ms-clear,
+input::-webkit-textfield-decoration-container,
+input::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
